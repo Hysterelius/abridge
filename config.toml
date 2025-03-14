@@ -2,10 +2,10 @@
 base_url = "https://abridge.netlify.app"
 # Usable site directly from disk, Including Search: "/home/jieiku/.dev/abridge/public"
 # Also set index format = "elasticlunr_javascript", and in [extra] uglyurls = true, integrity = false
-# If you use the npm/node script then all you have to do is set offline = true, and everything else is automatic.
+# If you use the npm/node script then all you have to do is set search_library = "offline", and everything else is automatic.
 
 title = "Abridge"
-description = "Abridge is a fast and lightweight Zola theme using semantic html, abridge.css class-light CSS, and No Mandatory JS."
+description = "Abridge is a fast, lightweight, and modern Zola theme (class-light, semantic HTML). Perfect Lighthouse, YellowLabTools, and Observatory scores."#for SEO aim for 140-180 Characters
 #theme = "abridge"
 
 default_language = "en"
@@ -17,6 +17,9 @@ taxonomies = [
 #    {name = "categories", feed = true},
     {name = "tags", feed = true},
 ]
+
+#ignored_content = []
+#ignored_static = ["apple-touch-icon.png","banner.png","safari-pinned-tab.svg","favicon*","m*.png","android-chrome*png"]
 
 #feed_filename = "atom.xml"
 #output_dir = "public"
@@ -34,6 +37,7 @@ include_content = true      # include rendered content of page/section in index
 [markdown]
 highlight_code = true
 highlight_theme = "css"
+bottom_footnotes = true # adds footnote backreference
 render_emoji = false
 external_links_target_blank = true # rel="noopener"
 external_links_no_follow = false   # rel="nofollow"
@@ -147,7 +151,7 @@ foothr = false # show or hide horizontal rule above footer
 ###############################################################################
 
 title_separator = "|"  # Separator between title and title_addition, set as |, -, _, etc
-title_addition = "Fast & Lightweight Zola Theme" # a default value for title addition
+title_addition = "Fast, Lightweight, and Modern Zola Theme" # a default value for title addition (for SEO aim for 50-70 characters including the title and separator 'Abridge | title_addition')
 author = "Jake G" # Put Your Name here
 keywords = "Abridge, Abridge.css, Zola, Theme, Zola Theme, getzola, Semantic Html, Fast, lightweight" # used for the primary site index
 banner = "banner.png" # Used as default image for OpenGraph/Twitter if page specific image is undefined.
@@ -169,16 +173,16 @@ feed = true # this adds the RSS feed icon in the footer.
 mail = "name@example.com"
 mastodon = "https://mastodon.example.com/@username"
 element = "matrix.example.com"
-buymeacoffee = "your-user-name"
-#kofi = "your-user-name"
-discord = "your-discord" # Everything after https://discord.com/   eg: invite/my-server  *or*  servers/my-server-id
+#buymeacoffee = "your-user-name"
+kofi = "your-user-name"
+#discord = "https://discord.com/invite/my-server" # https://discord.com/invite/my-server  *or*  https://discord.com/servers/my-server-id
 #twitter = "your-user-name"
 #facebook = "your-user-name"
 #linkedin = "your-user-name"
 #gitlab = "your-user-name"
 github = "your-user-name"
 #codeberg = "your-user-name" # Everything after https://codeberg.org/   eg: username  *or*  username/repository
-github_sponsor = "your-user-name"
+#github_sponsor = "your-user-name"
 #bitbucket = "your-user-name"
 #python = "your-user-name"
 #docker = "your-user-name"
@@ -190,6 +194,7 @@ twitch = "your-user-name"
 youtube = "channel/your-channel-id"
 #peertube = "https://peertube.example.com/@username"
 #researchgate = "your-profile-id"
+#telegram = "your-user-name"
 
 
 ###############################################################################
@@ -257,6 +262,8 @@ pwa_cache_all = true
 ### List of Files for the PWA to initially Cache, used if pwa_cache_all = false
 pwa_BASE_CACHE_FILES = "'/js/theme.min.js','/js/theme_light.min.js','/abridge.css','/js/abridge.min.js','/','/404.html','/offline/','/manifest.min.json'"
 
+pwa_IGNORE_FILES = ["_headers","sw.min.js","sw.js"]
+#pwa_IGNORE_FILES = ["_headers","sw.min.js","sw.js","android-chrome-192x192.png","android-chrome-512x512.png","apple-touch-icon.png","favicon-16x16.png","favicon-32x32.png","favicon.ico","m48.png","m72.png","m96.png","m128.png","m192.png","m384.png","m512.png","m1024.png","mstile-150x150.png"]
 
 ###############################################################################
 ### Favicons, comment out a line to disable loading some or all of these if needed.

@@ -1,29 +1,38 @@
 +++
-title = "Markdown et Style"
+date = 2022-05-15T15:00:00Z
 description = "Exemple d'article présentant la syntaxe et le formatage de base de Markdown pour les éléments HTML."
-date = 2022-05-15
 draft = false
+title = "Markdown et Style"
 
-[taxonomies]
-tags = ["Features","Markdown"]
 [extra]
 keywords = "Markdown, Style, Syntax, Syntax Highlighting"
-toc = true
 series = "Features"
-+++
+toc = true
 
+[taxonomies]
+tags = [
+    "Features",
+    "Markdown",
+]
++++
 Cet article propose un exemple de syntaxe Markdown de base pouvant être utilisée dans les fichiers de contenu Zola. Il indique également si les éléments HTML de base sont décorés avec CSS dans un thème Zola.
+
 <!-- more -->
+
 # Rubriques
 
-Les éléments HTML `<h1>`—`<h6>` suivants représentent six niveaux d'en-têtes de section.
-`<h1>` est le niveau de section le plus élevé alors qu'il `<h6>` est le plus bas.
+Les éléments HTML `<h1>`—`<h6>` suivants représentent six niveaux d'en-têtes de section. `<h1>` est le niveau de section le plus élevé alors qu'il `<h6>` est le plus bas.
 
 # H1
+
 ## H2
+
 ### H3
+
 #### H4
+
 ##### H5
+
 ###### H6
 
 # Paragraphe
@@ -52,17 +61,20 @@ L'élément blockquote représente le contenu qui est cité à partir d'une autr
 > Le pouvoir vient en réponse à un besoin, pas à un désir.<br>
 > — *Goku*
 
+> Adaptez ce qui est utile, rejetez ce qui est inutile et ajoutez ce qui vous est propre.<br>
+> — *Bruce Lee*
+
 # Les Tables
 
 Les tables ne font pas partie de la spécification principale de Markdown, mais Zola les prend en charge prêtes à l'emploi.
 
-    Nom | Âge
---------|------
-  Alice | 23
-    Bob | 27
-   Cody | 33
-   John | 59
-  Kerry | 23
+| Nom   | Âge |
+| ----- | --- |
+| Alice | 23  |
+| Bob   | 27  |
+| Cody  | 33  |
+| John  | 59  |
+| Kerry | 23  |
 
 ## Tableau avec Markdown en ligne
 
@@ -70,10 +82,10 @@ Les tables ne font pas partie de la spécification principale de Markdown, mais 
 | --------  | -------- | ------ | ----------------- |
 | *italique* | **gras** | `code` | ~~barré~~ |
 
-
 ## Grand tableau dans l'étiquette de la figure
 
 Entourez les très grandes tables `<figure></figure>` pour qu'elles puissent défiler horizontalement.
+
 <figure>
 
 | **Fabricant** | Volkswagen | Toyota | Ford | Honda | Chevrolet | BMW | Hyundai | Audi | Nissan | Kia | Mercedes | Tesla | Mitsubishi | Suzuki | Volvo | Subaru | Mazda | Jaguar | Buick | Lexus | GMC | Porsche | Cadillac |
@@ -81,6 +93,7 @@ Entourez les très grandes tables `<figure></figure>` pour qu'elles puissent dé
 | **Revenu $B** | $254 | $249 | $127 | $124 | $123 | $113 | $88 | $83 | $74 | $61 | $55 | $54 | $38 | $31 | $30 | $28 | $27 | $22 | $21 | $19 | $17 | $16 | $12 |
 
 </figure>
+
 *valeurs de revenus trouvées sur le moteur de recherche et non vérifiées, uniquement à des fins de démonstration du tableau de défilement des figures.*
 
 # Texte pliable
@@ -171,10 +184,10 @@ Appuyez sur pour terminer la session. <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>D
 
 La plupart <mark>salamanders</mark> sont nocturnes et chassent les insectes, les vers et autres petites créatures.
 
----
+-----
 <!-- Note: There must be a blank line between every two lines of the footnote definition.  -->
-[^1]: La citation ci-dessus est extraite du [discours](https://www.youtube.com/watch?v=PAAkCSZUG1c)
-de Rob Pike lors du Gopherfest, le 18 novembre 2015.
+
+[^1]: La citation ci-dessus est extraite du [discours](https://www.youtube.com/watch?v=PAAkCSZUG1c) de Rob Pike lors du Gopherfest, le 18 novembre 2015.
 
 [^2]: La citation est la première phrase de [la Métaphysique](https://en.wikipedia.org/wiki/Metaphysics_(Aristotle)) d'Aristotle.
 

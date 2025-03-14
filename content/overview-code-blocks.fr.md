@@ -1,19 +1,24 @@
 +++
-title = "Blocs de code et thème"
+date = 2022-05-16T15:00:00Z
 description = "Exemple d'article présentant la coloration syntaxique et la mise en forme des blocs de code avec un thème personnalisé."
-date = 2022-05-16
 draft = false
+title = "Blocs de code et thème"
 
-[taxonomies]
-tags = ["Features","Markdown"]
 [extra]
 keywords = "Code, Code Blocks, Syntax, Syntax Highlighting, Theme"
-toc = true
 series = "Features"
-+++
+toc = true
 
+[taxonomies]
+tags = [
+    "Features",
+    "Markdown",
+]
++++
 Cet article présente différents Code Blocks permettant de comparer facilement des thèmes sublimes.
+
 <!-- more -->
+
 ## Blocs de codes
 
 Blocs de code.. ❤️ avec coloration syntaxique automatique ✨‍
@@ -25,6 +30,7 @@ Voir [les docs](https://www.getzola.org/documentation/content/syntax-highlightin
 Si nous voulons, nous pouvons aussi `spécifier le code en ligne` ce qui est utile pour `les petites choses`.
 
 ### Rust
+
 ```rust
 fn main() {
     let greetings = ["Hello", "Hola", "Bonjour",
@@ -67,21 +73,12 @@ fn main() {
 }
 ```
 
-### Bash
-```bash
-#!/bin/bash
-for d in /sys/kernel/iommu_groups/*/devices/*; do
-  n=${d#*/iommu_groups/*}; n=${n%%/*}
-  printf 'IOMMU Group %s ' "$n"
-  lspci -nns "${d##*/}"
-done
-```
-
 ### TOML
+
 ```toml,linenos,hl_lines=3
 base_url = "https://abridge.netlify.app/"
 title = "Abridge"
-description = "Abridge est un thème Zola rapide et léger utilisant le HTML sémantique, le CSS abridge.css class-light et aucun JS obligatoire."
+description = "Abridge is a fast and lightweight Zola theme using semantic html, abridge.css class-light CSS, and No Mandatory JS."
 default_language = "en"
 #theme = "abridge"
 
@@ -94,7 +91,19 @@ taxonomies = [
 ]
 ```
 
+### Bash
+
+```bash,hl_lines=5
+#!/bin/bash
+for d in /sys/kernel/iommu_groups/*/devices/*; do
+  n=${d#*/iommu_groups/*}; n=${n%%/*}
+  printf 'IOMMU Group %s ' "$n"
+  lspci -nns "${d##*/}"
+done
+```
+
 ### HTML
+
 ```html
 <!doctype html>
 <html lang="en">
@@ -110,6 +119,7 @@ taxonomies = [
 ```
 
 ### CSS
+
 ```css
 html {
     font-size: var(--fs);
@@ -121,6 +131,7 @@ html {
 ```
 
 ### SCSS
+
 ```scss
 
 $font: Roboto system-ui -apple-system BlinkMacSystemFont "Segoe UI" Oxygen Ubuntu Cantarell "Fira Sans" "Droid Sans" "Helvetica Neue" "Noto Sans" Helvetica Arial sans-serif !default;
@@ -142,6 +153,7 @@ $font-mono: ui-monospace Menlo Monaco Consolas "SF Mono" "Cascadia Mono" "Segoe 
 ```
 
 ### Javascript
+
 ```javascript
 function closeSearch() {//close the search displaying the regular page.
     const e = document.querySelector("main");
@@ -161,6 +173,7 @@ function goSearch() {// on enter key or search icon click display results to the
 ```
 
 ### PHP
+
 ```php
 <?php
 /**
@@ -184,8 +197,8 @@ $_SESSION['PFA_token'] = md5(uniqid("pfa" . rand(), true));
 /* vim: set expandtab softtabstop=4 tabstop=4 shiftwidth=4: */
 ```
 
-
 ### Json
+
 ```json
 {
     "name": "Abridge Zola Theme",
@@ -218,6 +231,7 @@ $_SESSION['PFA_token'] = md5(uniqid("pfa" . rand(), true));
 ```
 
 ### SQL
+
 ```sql
 -- jelly-actix-web-starter - Creates an accounts table, along with some associated helpers.
 
@@ -250,6 +264,7 @@ for each row execute procedure update_timestamp();
 ```
 
 ### Lua
+
 ```lua
 function square(x)
     return x * x
@@ -269,6 +284,7 @@ print(getPlayerInformation())
 ```
 
 ### C
+
 ```c
 #include <stdio.h>
 int main() {
@@ -281,6 +297,7 @@ int main() {
 ```
 
 ### C++
+
 ```cpp
 // Your First C++ Program
 
@@ -296,6 +313,7 @@ int main() {
 ```
 
 ### Go
+
 ```go
 package main
 
@@ -309,6 +327,7 @@ func main() {
 ```
 
 ### Python
+
 ```python
 #!/usr/bin/env python3
 import smtplib, socket
@@ -364,6 +383,7 @@ while True:
 ```
 
 ### Ruby
+
 ```ruby
 =begin
   Ruby program to check whether the

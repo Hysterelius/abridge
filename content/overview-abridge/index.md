@@ -1,52 +1,56 @@
 +++
-title = "Abridge Zola Theme"
+date = 2022-05-17T15:00:00Z
 description = "Abridge is a fast and lightweight Zola theme using semantic html, abridge.css class-light CSS, and No Mandatory JS."
-date = 2022-05-17
-updated = 2023-07-21
 draft = false
+title = "Abridge Zola Theme"
+updated = 2023-07-21T15:00:00Z
+
+[extra]
+series = "Features"
+toc = true
 
 [taxonomies]
-tags = ["Features","Config"]
-[extra]
-toc = true
-series = "Features"
+tags = [
+    "Features",
+    "Config",
+]
 +++
+A fast, lightweight, and modern [Zola](https://getzola.org) theme utilizing [abridge.css](https://github.com/Jieiku/abridge.css) (a class-light semantic HTML CSS Framework). Perfect [Lighthouse](https://pagespeed.web.dev/report?url=abridge.netlify.app), [YellowLabTools](https://yellowlab.tools/), and [Observatory](https://developer.mozilla.org/en-US/observatory/analyze?host=abridge.netlify.app) scores. Here is a [Zola Themes Benchmarks](https://github.com/Jieiku/zola-themes-benchmarks/blob/main/README.md) Page.
 
-A fast, lightweight, and modern [Zola](https://getzola.org) theme utilizing [abridge.css](https://github.com/Jieiku/abridge.css) (a class-light semantic HTML CSS Framework). Perfect [Lighthouse](https://pagespeed.web.dev/report?url=abridge.netlify.app), [YellowLabTools](https://yellowlab.tools/), and [Observatory](https://observatory.mozilla.org/analyze/abridge.netlify.app) scores. Here is a [Zola Themes Benchmarks](https://github.com/Jieiku/zola-themes-benchmarks/blob/main/README.md) Page.
 <!-- more -->
 
 ![lighthouse](lighthouse.png)
 
 ## Features
 
-- [X] Perfect [Lighthouse](https://pagespeed.web.dev/report?url=abridge.netlify.app), [YellowLabTools](https://yellowlab.tools/), and [Observatory](https://observatory.mozilla.org/analyze/abridge.netlify.app) scores.
-- [X] [PWA support](#pwa-progressive-web-app) (Progressive Web Application).
-- [X] All JavaScript can be [fully disabled](https://abridge.netlify.app/overview-abridge/#javascript-files).
-- [X] Dark, Light, Auto, and Switcher themes. (colors can be customized, css variables)
-- [X] Code [syntax highlighting](https://abridge.netlify.app/overview-code-blocks/). (colors can be customized, css variables)
-- [X] Numbered code blocks with [line highlighting](https://abridge.netlify.app/overview-code-blocks/#toml).
-- [X] Entirely Offline Site by using the PWA **or** by setting `offline = true` in `config.toml` (full search support).
-- [X] Multi-language support.
-- [X] Search support. ([elasticlunr](https://abridge.pages.dev/), [pagefind](https://abridge-pagefind.pages.dev/), [tinysearch](https://abridge-tinysearch.pages.dev/))
-- [X] Search Suggestions navigation keys, `/` focus, `arrow` move, `enter` select, `escape` close.
-- [X] Search Results Page, type search query then hit `Enter Key` or `click` the search button icon.
-- [X] [SEO](#seo-and-header-tags) support. (Search Engine Optimization)
-- [X] [Pagination](#pagination) with numbered paginator on index.
-- [X] Title Based Previous and Next Article links at bottom of Article.
-- [X] Table of Contents in page Index (Optional, clickable links)
-- [X] Recent Posts Block. (Optional)
-- [X] Back to Top button. (uses css only)
-- [X] Code Blocks copy button.
-- [X] Email link in footer obfuscation. (anti-spam)
-- [X] [KaTeX](https://katex.org/) support.
-- [X] [Archive page](https://abridge.netlify.app/archive/).
-- [x] [Tags](https://abridge.netlify.app/tags/).
-- [x] Categories. (similar to Tags, disabled/commented out by default)
-- [x] Social icon links in footer.
-- [X] Responsive design. (mobile first)
-- [X] Video Shortcodes: [Youtube](https://abridge.netlify.app/video-streaming-sites/overview-embed-youtube/), [Vimeo](https://abridge.netlify.app/video-streaming-sites/overview-embed-vimeo/), [Streamable](https://abridge.netlify.app/video-streaming-sites/overview-embed-streamable/).
-- [X] Media Shortcodes: [video](https://abridge.netlify.app/overview-rich-content/#video), [img](https://abridge.netlify.app/overview-images/#img-shortcode), [imgswap](https://abridge.netlify.app/overview-images/#imgswap-shortcode), [image](https://abridge.netlify.app/overview-rich-content/#image), [gif](https://abridge.netlify.app/overview-rich-content/#gif), [audio](https://abridge.netlify.app/overview-rich-content/#audio).
-- [X] Other Shortcodes: [showdata](https://abridge.netlify.app/overview-showdata/), [katex](https://abridge.netlify.app/overview-math/#usage-1).
+- Perfect [Lighthouse](https://pagespeed.web.dev/report?url=abridge.netlify.app), [YellowLabTools](https://yellowlab.tools/), and [Observatory](https://developer.mozilla.org/en-US/observatory/analyze?host=abridge.netlify.app) scores.
+- [PWA support](#pwa) (Progressive Web Application).
+- All JavaScript can be [fully disabled](https://abridge.netlify.app/overview-abridge/#javascript-files).
+- Dark, Light, Auto, and Switcher themes. (colors can be customized, css variables)
+- Code [syntax highlighting](https://abridge.netlify.app/overview-code-blocks/). (colors can be customized, css variables)
+- Numbered code blocks with [line highlighting](https://abridge.netlify.app/overview-code-blocks/#toml).
+- Entirely Offline Site by using the PWA **or** by setting `search_library = "offline"` in `config.toml`.
+- Multi-language support.
+- Search support. ([elasticlunr](https://abridge.pages.dev/), [pagefind](https://abridge-pagefind.pages.dev/), [tinysearch](https://abridge-tinysearch.pages.dev/))
+- Search Suggestions navigation keys, `/` focus, `arrow` move, `enter` select, `escape` close.
+- Search Results Page, type search query then hit `Enter Key` or `click` the search button icon.
+- [SEO](#seo) support. (Search Engine Optimization)
+- [Pagination](#pagination) with numbered paginator on index.
+- Title Based Previous and Next Article links at bottom of Article.
+- Table of Contents in page Index (Optional, clickable links)
+- Recent Posts Block. (Optional)
+- Back to Top button. (uses css only)
+- Code Blocks copy button.
+- Email link in footer obfuscation. (anti-spam)
+- [KaTeX](https://katex.org/) support.
+- [Archive page](https://abridge.netlify.app/archive/).
+- [Tags](https://abridge.netlify.app/tags/).
+- Categories. (similar to Tags, disabled/commented out by default)
+- Social icon links in footer.
+- Responsive design. (mobile first)
+- Video Shortcodes: [Youtube](https://abridge.netlify.app/video-streaming-sites/overview-embed-youtube/), [Vimeo](https://abridge.netlify.app/video-streaming-sites/overview-embed-vimeo/), [Streamable](https://abridge.netlify.app/video-streaming-sites/overview-embed-streamable/).
+- Media Shortcodes: [video](https://abridge.netlify.app/overview-rich-content/#video), [img](https://abridge.netlify.app/overview-images/#img-shortcode), [imgswap](https://abridge.netlify.app/overview-images/#imgswap-shortcode), [image](https://abridge.netlify.app/overview-rich-content/#image), [gif](https://abridge.netlify.app/overview-rich-content/#gif), [audio](https://abridge.netlify.app/overview-rich-content/#audio).
+- Other Shortcodes: [showdata](https://abridge.netlify.app/overview-showdata/), [katex](https://abridge.netlify.app/overview-math/#usage-1).
 
 ## Quick Start
 
@@ -134,7 +138,7 @@ Zola will start the dev web server, accessible by default at `http://127.0.0.1:1
 
 Saved changes will live reload in the browser. (press `ctrl+f5`, or while developing set `pwa=false` in `config.toml`)
 
-## Pagination
+## Pagination {#pagination}
 
 You can set the number of home page items by editing `content\_index.md` file and adjusting `paginate_by`
 
@@ -162,11 +166,13 @@ $abridgeMode: "switcher",//valid values: switcher, auto, dark, light
 ### Colors and Styles
 
 You can specify which color template you want to use as a base:
+
 ```scss
 $color: "orange",// color template to use/override: orange, blue, blueshade
 ```
 
 Then override individual colors as needed:
+
 ```scss
 /// Dark Colors
 $f1d: #ccc,// Font Color Primary
@@ -235,7 +241,7 @@ menu_footer = [
 ]
 ```
 
-### SEO and Header Tags
+### SEO and Header Tags {#seo}
 
 You can review the SEO tags in the seo macro located at `templates/macros/seo.html`, all configurable values should be in `config.toml` under `config.extra` or in the content markdown files.
 
@@ -245,19 +251,11 @@ You should also set page specific keywords unless your keywords defined in confi
 
 You can optionally also set a page specific image for search results by using page.extra.thumbnail. Facebook, Twitter, and OpenGraph Cards are supported (automatic image & description for posted links). OpenGraph recommends 1200 x 630 (1.9:1). Twitter recommends 2:1 for large and 1:1 for small. If you do not set a page specific thumbnail then the banner defined in config.toml will be used instead.
 
-Refer to [overview-images](https://raw.githubusercontent.com/Jieiku/abridge/master/content/overview-images/index.md) for an example:
+Refer to [overview-images](https://raw.githubusercontent.com/Jieiku/abridge/master/content/overview-images/index.md) for an example.
+
 ```md
 +++
-title = "Image Shortcodes"
-description = "Images can be embedded directly using markdown `![Ferris](ferris.svg)`, but using a shortcode prevents CLS by explicitly setting the width and height."
-date = 2021-05-19
-draft = false
-
-[taxonomies]
-tags = ["Features","Shortcodes","Images"]
 [extra]
-toc = true
-keywords = "Image, Markdown, Shortcodes, Swap"
 thumbnail = "ferris-gesture.png"
 +++
 ```
@@ -270,7 +268,7 @@ You can see a demo on [this page](https://abridge.netlify.app/overview-math/).
 
 For better performance I recommend only enabling math on a [per page bases in your post.md files](https://github.com/Jieiku/abridge/blob/master/content/overview-math.md?plain=1#L11-L13), instead of in your main config.toml file.
 
-### PWA, Progressive Web App
+### PWA, Progressive Web App {#pwa}
 
 Abridge theme has PWA support. You can install the entire site as an app and have it work offline. To try it out simply use google chrome or your phone and go here: [abridge.netlify.app](https://abridge.netlify.app/)
 
@@ -327,9 +325,9 @@ All that is necessary is `zola build && npm run abridge`.
 
 In addition to elasticlunr abridge also supports pagefind and tinysearch.
 
-pagefind demo: https://jieiku.github.io/abridge-pagefind/
+pagefind demo: https://abridge-pagefind.pages.dev/
 
-tinysearch demo: https://jieiku.github.io/abridge-tinysearch/
+tinysearch demo: https://abridge-tinysearch.pages.dev/
 
 To use tinysearch extra steps are required.
 
@@ -369,6 +367,7 @@ exit # reload shell environment
 ```
 
 Switch Abridge to tinysearch:
+
 ```bash
 sed -i 's/^search_library =.*/search_library = "tinysearch"/' config.toml
 npm run abridge

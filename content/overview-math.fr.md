@@ -1,23 +1,28 @@
 +++
-title = "Notation mathématiques"
+date = 2021-05-05T15:00:00Z
 description = "Exemple d'article présentant l'affichage des notations mathématiques, rendu possible par la bibliothèque KaTeX."
-date = 2021-05-05
-updated = 2022-01-01
 draft = false
+title = "Notation mathématiques"
+updated = 2022-01-01T15:00:00Z
 
-[taxonomies]
-tags = ["Features","Shortcodes","Mathematics"]
 [extra]
+keywords = "Math, Matematics, Notation, KaTeX, Mathematical Notation"
 math = true
 math_auto_render = true
-keywords = "Math, Matematics, Notation, KaTeX, Mathematical Notation"
-toc = true
 series = "Features"
-+++
+toc = true
 
+[taxonomies]
+tags = [
+    "Features",
+    "Shortcodes",
+    "Mathematics",
+]
++++
 Vous pouvez utiliser [KaTeX](https://katex.org) pour rendre des notations mathématiques.
 
 Vous pouvez activer le $\KaTeX$ prise en charge globale, par section ou par page.
+
 <!-- more -->
 
 ## Activer globalement
@@ -70,13 +75,17 @@ Enveloppez tout [valide](https://katex.org/docs/supported.html) $\KaTeX$ syntaxe
 C'est la plus belle équation que j'ai jamais vue:
 
 ### Usage
+
 ```rs
 {%/* katex(block=false) */%} e^{i\pi}+1=0 {%/* end */%}
 ```
+
 ### Sortir
+
 ```html
 {% katex(block=false) %} e^{i\pi}+1=0 {% end %}
 ```
+
 {% katex(block=false) %} e^{i\pi}+1=0 {% end %}
 
 ### Bloquer les mathématiques
@@ -84,24 +93,30 @@ C'est la plus belle équation que j'ai jamais vue:
 Certaines mathématiques en mode affichage sont assez justes :
 
 ### Usage
+
 ```rs
 {%/* katex(block=true) */%} \int_0^1 x^2 dx {%/* end */%}
 ```
+
 ### Sortir
+
 ```html
 {% katex(block=true) %} \int_0^1 x^2 dx {% end %}
 ```
+
 {% katex(block=true) %} \int_0^1 x^2 dx {% end %}
 
 ### Rendu automatique en ligne
-```
+
+```tex
 $ e^{i\pi}+1=0 $
 ```
 
 $ e^{i\pi}+1=0 $
 
 ### Bloc de rendu automatique
-```
+
+```tex
 $$
 f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
 $$

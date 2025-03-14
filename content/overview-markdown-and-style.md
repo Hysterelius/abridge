@@ -1,52 +1,49 @@
 +++
-title = "Markdown and Style"
+date = 2022-05-15T15:00:00Z
 description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-date = 2022-05-15
 draft = false
+title = "Markdown and Style"
 
-[taxonomies]
-tags = ["Features","Markdown"]
 [extra]
 keywords = "Markdown, Style, Syntax, Syntax Highlighting"
-toc = true
 series = "Features"
-+++
+toc = true
 
+[taxonomies]
+tags = [
+    "Features",
+    "Markdown",
+]
++++
 This article offers a sample of basic Markdown syntax that can be used in Zola content files, also it shows if basic HTML elements are decorated with CSS in a Zola theme.
+
 <!-- more -->
+
 # Headings
 
-The following HTML `<h1>`—`<h6>` elements represent six levels of section
-headings. `<h1>` is the highest section level while `<h6>` is the lowest.
+The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
 
 # H1
+
 ## H2
+
 ### H3
+
 #### H4
+
 ##### H5
+
 ###### H6
 
 # Paragraph
 
-Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum,
-voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma
-dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as
-cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin
-porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur?
-Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit
-ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda
-veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore
-eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata
-tiustia prat.
+Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.
 
-Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne
-sapicia is sinveli squiatum, core et que aut hariosam ex eat.
+Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.
 
 # Blockquotes
 
-The blockquote element represents content that is quoted from another source,
-optionally with a citation which must be within a `footer` or `cite` element,
-and optionally with in-line changes such as annotations and abbreviations.
+The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations.
 
 ## Blockquote no attribution
 
@@ -64,29 +61,31 @@ and optionally with in-line changes such as annotations and abbreviations.
 > Power comes in response to a need, not a desire.<br>
 > — *Goku*
 
+> Adapt what is useful, reject what is useless, and add what is specifically your own.<br>
+> — *Bruce Lee*
+
 # Tables
 
-Tables aren't part of the core Markdown spec, but Zola supports them
-out-of-the-box.
+Tables aren't part of the core Markdown spec, but Zola supports them out-of-the-box.
 
-   Name | Age
---------|------
-  Alice | 23
-    Bob | 27
-   Cody | 33
-   John | 59
-  Kerry | 23
+| Name  | Age |
+| ----- | --- |
+| Alice | 23  |
+| Bob   | 27  |
+| Cody  | 33  |
+| John  | 59  |
+| Kerry | 23  |
 
 ## Table Inline Markdown
 
 | Italics   | Bold     | Code   | StrikeThrough     |
-| --------  | -------- | ------ | ----------------- |
+| --------- | -------- | ------ | ----------------- |
 | *italics* | **bold** | `code` | ~~strikethrough~~ |
-
 
 ## Large table within figure
 
 Surround very Large tables with `<figure></figure>` so they can scroll horizontally.
+
 <figure>
 
 | **Manufacturer** | Volkswagen | Toyota | Ford | Honda | Chevrolet | BMW | Hyundai | Audi | Nissan | Kia | Mercedes | Tesla | Mitsubishi | Suzuki | Volvo | Subaru | Mazda | Jaguar | Buick | Lexus | GMC | Porsche | Cadillac |
@@ -94,6 +93,7 @@ Surround very Large tables with `<figure></figure>` so they can scroll horizonta
 | **Revenue $B** | $254 | $249 | $127 | $124 | $123 | $113 | $88 | $83 | $74 | $61 | $55 | $54 | $38 | $31 | $30 | $28 | $27 | $22 | $21 | $19 | $17 | $16 | $12 |
 
 </figure>
+
 *revenue values found on search engine and not verified, for figure scroller table demonstration purposes only.*
 
 # Foldable Text
@@ -180,16 +180,14 @@ H<sub>2</sub>O
 
 X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
 
-Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the
-session.
+Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
 
-Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and
-other small creatures.
+Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
 
----
+-----
 <!-- Note: There must be a blank line between every two lines of the footnote definition.  -->
-[^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c)
-during Gopherfest, November 18, 2015.
+
+[^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
 
 [^2]: The quote is the first sentence of Aristotle's [Metaphysics](https://en.wikipedia.org/wiki/Metaphysics_(Aristotle)).
 
